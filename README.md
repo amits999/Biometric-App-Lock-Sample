@@ -6,8 +6,7 @@ This application uses android Biometric Prompt Library to authenticate user usin
 <img src="https://img.shields.io/badge/API-28%2B-blue.svg?style=flat" style="max-width:100%;" alt="API" data-canonical-src="https://img.shields.io/badge/API-23%2B-blue.svg?style=flat" style="max-width:100%;">
 
 
-<p><a href="https://github.com/amits999/Biometric-App-Lock-Sample/images/screen-demo.jpg" target="_blank"><img src="https://github.com/amits999/Biometric-App-Lock-Sample/images/screen-demo.jpg" width="250" style="max-width:100%;"></a></p>
-</br></br></br>
+![Main Part](./images/screen-demo.jpg)
 
 
 
