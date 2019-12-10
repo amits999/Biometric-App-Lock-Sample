@@ -32,14 +32,13 @@ public class MainActivity extends AppCompatActivity  {
                     // user clicked negative button
                     Toast.makeText(activity, "Operation Cancelled By User!", Toast.LENGTH_SHORT).show();
                 } else {
-                    //TODO: Called when an unrecoverable error has been encountered and the operation is complete.
+                    Toast.makeText(activity, "Unknown Error!", Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onAuthenticationSucceeded(@NonNull BiometricPrompt.AuthenticationResult result) {
                 super.onAuthenticationSucceeded(result);
-                //TODO: Called when a biometric is recognized.
                 startActivity(new Intent(MainActivity.this, LoggedInActivity.class));
                 Toast.makeText(activity, "Login Successful!", Toast.LENGTH_SHORT).show();
             }
@@ -47,7 +46,7 @@ public class MainActivity extends AppCompatActivity  {
             @Override
             public void onAuthenticationFailed() {
                 super.onAuthenticationFailed();
-                //TODO: Called when a biometric is valid but not recognized.
+                //Called when a biometric is valid but not recognized.
                 Toast.makeText(activity, "Fingerprint not recognized!", Toast.LENGTH_SHORT).show();
             }
         });
