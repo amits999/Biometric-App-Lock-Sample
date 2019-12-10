@@ -30,9 +30,10 @@ public class MainActivity extends AppCompatActivity  {
                 super.onAuthenticationError(errorCode, errString);
                 if (errorCode == BiometricPrompt.ERROR_NEGATIVE_BUTTON) {
                     // user clicked negative button
-                    Toast.makeText(activity, "Operation Cancelled By User!", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(activity, "Operation Cancelled By User!", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(activity, "Unknown Error!", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(activity, "Unknown Error!", Toast.LENGTH_SHORT).show();
+                    // Called when an unrecoverable error has been encountered and the operation is complete.
                 }
             }
 
@@ -40,22 +41,22 @@ public class MainActivity extends AppCompatActivity  {
             public void onAuthenticationSucceeded(@NonNull BiometricPrompt.AuthenticationResult result) {
                 super.onAuthenticationSucceeded(result);
                 startActivity(new Intent(MainActivity.this, LoggedInActivity.class));
-                Toast.makeText(activity, "Login Successful!", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(activity, "Login Successful!", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onAuthenticationFailed() {
                 super.onAuthenticationFailed();
                 //Called when a biometric is valid but not recognized.
-                Toast.makeText(activity, "Fingerprint not recognized!", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(activity, "Fingerprint not recognized!", Toast.LENGTH_SHORT).show();
             }
         });
 
         final BiometricPrompt.PromptInfo promptInfo = new BiometricPrompt.PromptInfo.Builder()
-                .setTitle("Set the title to display.")
-                .setSubtitle("Set the subtitle to display.")
-                .setDescription("Set the description to display")
-                .setNegativeButtonText("Negative Button")
+                .setTitle("Login")
+                .setSubtitle("Login to your account!")
+                .setDescription("Place your finger on the device home button to verify your identity")
+                .setNegativeButtonText("CANCEL")
                 .build();
 
         findViewById(R.id.login_button).setOnClickListener(new View.OnClickListener() {
